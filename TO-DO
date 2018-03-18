@@ -1,0 +1,27 @@
+
+The things that must be fixed and added regardless of the sources I start with:
+- Increase poison damage to make everything poison-related more useful
+- Increase hero set bonus to +15% damage and +15% hit-rate
+- Add a damage bonus to crafted weapons based on the completion rate (max +5% dmg) (DMG+(Completion-% / 100 * 3.5))
+- Add a defense bonus to crafted armours based on completion rate (max +5% def) (DEF+(Completion-% / 100 * 3.5))
+- Black Shadow Sword, Wizard Magic Wand (MS.20) are craftable -only
+- LB and DE have damage bonuses (+6 dmg) during the day / night. Also less damage (-2 dmg) in the opposite time
+- Demon Slayer does +15% damage to demons
+- The Slime King (spawns once you have killed 1000 slimes in map X)
+- The Lottery Ticket (all items are obtainable, N/A, price of a ticket 20k or 50k
+- The exp and gold drop rates
+- Beholder Necklace (allows you to see invisible enemies, but cancels all PFM/AMP/PFA/GDS and invisibility effects)
+- New rings for each monster (adds dmg against the respective mob type; for example a Slime Ring adds +1 dmg against Slimes and only Slimes)
+- Pits, random spawns etc.
+- Roaming mid-bosses (Helclaw, TigerWorm, etc.)
+- Add item description when mouse-hovering
+
+
+Make sure the following things work, and fix them if necessary
+- MIM
+- Fire Bow effect (fire-spike)
+- Direction Bow (not necessary to fix even)
+- Party members shown on minimap
+- Blood items
+- Illusion effect over characted head
+- Lucky Gold Ring effect
