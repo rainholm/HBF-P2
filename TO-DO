@@ -4,6 +4,7 @@ The things that must be fixed and added regardless of the sources I start with:
 - Increase hero set bonus to +15% damage and +15% hit-rate
 - Add a damage bonus to crafted weapons based on the completion rate (max +5% dmg) (DMG+(Completion-% / 100 * 3.5))
 - Add a defense bonus to crafted armours based on completion rate (max +5% def) (DEF+(Completion-% / 100 * 3.5))
+- Manufactured items have proper endurance bonus
 - Black Shadow Sword, Wizard Magic Wand (MS.20) are craftable -only
 - LB and DE have damage bonuses (+6 dmg) during the day / night. Also less damage (-2 dmg) in the opposite time
 - Demon Slayer does +15% damage to demons
@@ -15,6 +16,7 @@ The things that must be fixed and added regardless of the sources I start with:
 - Pits, random spawns etc.
 - Roaming mid-bosses (Helclaw, TigerWorm, etc.)
 - Add item description when mouse-hovering
+- Add CTRL+N neutral attack mode (no need to hold down CTRL when attacking)
 
 
 Make sure the following things work, and fix them if necessary
@@ -25,3 +27,14 @@ Make sure the following things work, and fix them if necessary
 - Blood items
 - Illusion effect over characted head
 - Lucky Gold Ring effect
+- Promisedland level limit
+- Barracks level limit
+- All armours and weapons should be upgradable
+- Can't recall if taken damage in 10 seconds
+- Can't exit enemy buildings (force recall)
+- Magic jewel effects
+- Spell manuals only usable if in magic shop, outside magic shop nothing happens if you double click it
+- Player can't take multiple sets of DK items
+- New players have to wait 3 hours before they can /rep+ or /rep- and be at least level 45
+- Righteous damage (attacker reputation - enemy reputation) / 20, with a maximum bonus of 10
+- Kloness effect (attacker reputation - enemy reputation) / 18, with a maximum bonus of 15
