@@ -1,0 +1,34 @@
+Find and replace:
+
+				if (cTargetType == DEF_OWNERTYPE_PLAYER) {
+					if (m_pClientList[sTargetH] == NULL) return 0;
+					if (m_pClientList[sTargetH]->m_iRating < 0) {
+						iRepDamage = (abs(m_pClientList[sTargetH]->m_iRating)/10);
+						if (iRepDamage > 10) iRepDamage = 10;
+						iAP_SM += iRepDamage;
+						iAP_L += iRepDamage;
+					}
+				}
+        
+        
+ With:
+ 
+ 				// If the  target is a player
+				// Compare the amount of rep between the attacker and defender
+				// If attackers rep is higher, add dmg -> difference of rep / 25
+				// if defenders rep is higher, lower dmg -> difference of rep / 25
+				if (cTargetType == DEF_OWNERTYPE_PLAYER) {
+					if (m_pClientList[sTargetH] == NULL) return 0;
+					if (m_pClientList[sTargetH]->m_iRating < m_pClientList[sAttackerH]->m_iRating) {
+						iRepDamage = (abs(m_pClientList[sTargetH]->m_iRating - m_pClientList[sAttackerH]->m_iRating) / 25);
+						if (iRepDamage > 10) iRepDamage = 10;
+						iAP_SM += iRepDamage;
+						iAP_L += iRepDamage;
+					}
+					else if (m_pClientList[sTargetH]->m_iRating > m_pClientList[sAttackerH]->m_iRating) {
+						iRepDamage = (abs(m_pClientList[sTargetH]->m_iRating - m_pClientList[sAttackerH]->m_iRating) / 25);
+						if (iRepDamage > 10) iRepDamage = 10;
+						iAP_SM -= iRepDamage;
+						iAP_L -= iRepDamage;
+					}
+				}
