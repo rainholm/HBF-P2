@@ -1,0 +1,7 @@
+Add:
+
+		// v3.82 Demon Slayer does addition damage to demons
+		if ((m_pClientList[sAttackerH]->m_pItemList[sWeaponIndex]->m_sIDnum == 616) && // Demon Slayer
+			(m_pNpcList[sTargetH]->m_sType == 31)) { // Demon
+			iAP_L += 10;
+		}
