@@ -13,20 +13,38 @@ The things that must be fixed and added regardless of the sources I start with:
 - The exp and gold drop rates
 - Beholder Necklace (allows you to see invisible enemies, but cancels all PFM/AMP/PFA/GDS and invisibility effects)
 - New rings for each monster (adds dmg against the respective mob type; for example a Slime Ring adds +1 dmg against Slimes and only Slimes)
-- Pits, random spawns etc.
+- Pits, random spawns etc. _> Enough random mob spaws in ML and other maps to engage the player
 - Roaming mid-bosses (Helclaw, TigerWorm, etc.)
 - Add item description when mouse-hovering
 - Add CTRL+N neutral attack mode (no need to hold down CTRL when attacking)
+- Add new quests
+- Parchment of Accomplisment (Even reward, awarded after reaching a certain milestone; adds 10 rep)
+- Berserk Scroll (costs 2000g or 5000g, casts Berserk on the user for 40 secs)
+- Stronger guards
+- Spell timer icons (from HBusa 4.1)
+- New armour stats (Increase HP/MP/SP +7 -> +91 points static)
+- New ring / necklace stats (Increase EXP, Increase DROP-RATE-not rare-drop)
+- Increase/modify the stats that get dropped; EXP stat goes from 7-35% instead of just 20%,
+      Gold goes from 20-70%, Mana Converting goes up to 35%, Crit inc% goes up to +10%
+- New Automatic Events; Increased Drop rate, Increased EK, Increased DEF, Increased DMG, Increased REP
+- Maximum Civilian level is 45, but exp gained as a civilian is 33% lower after level 19
+- Combatants get 7% more exp than Civilians do
+- Increased Fencing critical chance and slightly higher damage
+- REP damage caps at 1000 rep (2d3+4 instead of flat +15 dmg), while rep drop-bonus caps at 800 rep (+3%) (increments of 200)
+- New item: Event Token, given as a reward for events
+    - Should it be exchangeable to items or give a random item (lottery) upon use?
 
 
 Make sure the following things work, and fix them if necessary
 - MIM
 - Fire Bow effect (fire-spike)
 - Direction Bow (not necessary to fix even)
+- Storm Bringer requires 64 int to wield
 - Party members shown on minimap
 - Blood items
 - Illusion effect over characted head
 - Lucky Gold Ring effect
+- Kloness Necklace effect
 - Promisedland level limit
 - Barracks level limit
 - All armours and weapons should be upgradable
@@ -34,7 +52,54 @@ Make sure the following things work, and fix them if necessary
 - Can't exit enemy buildings (force recall)
 - Magic jewel effects
 - Spell manuals only usable if in magic shop, outside magic shop nothing happens if you double click it
+- Spell manuals don't get deleted if you don't meet the requirements
 - Player can't take multiple sets of DK items
 - New players have to wait 3 hours before they can /rep+ or /rep- and be at least level 45
 - Righteous damage (attacker reputation - enemy reputation) / 20, with a maximum bonus of 10
 - Kloness effect (attacker reputation - enemy reputation) / 18, with a maximum bonus of 15
+- Repair-All -option in Blacksmith and Shop
+- Merien Shield -effect prevents armours from losing endurance and stripping
+- Mining rate for gems vs other minerals
+- Hero cape upgrade to +1
+- Quests have a low change of handing the player a rare item as a reward instead of Gold
+- Ancient Slates (Do they correctly go into the dialog, chances of getting each slate, etc.)
+- You have to wait 5 seconds after moving before using a Recall Scroll
+- Casting Poison spell on a friendly summons a guard
+- Attacking friendlies in Elvine/Aresden towns summons a guard
+- Criminals go to jail once they die
+- Endurance is calculated in real-time (calculate endurance each time a player takes damage)
+- Sex Change Potion automatically un-equips all items before use
+- Zemstone endurance (3 uses)
+- Max party size is 5; the exp is allocated as;
+    1 member (no-party) 100%
+    2 members 80+80% = 160%
+    3 members 70+70+70% 210%
+    4 members 60+60+60+60% 240%
+    5 members 50+50+50+50+50% 250%
+- Hunger -> If player is hungry, spell cast rate goes down, regen rates go down
+- DISABLE automatic tile/map cleaner
+- Safe Zones
+- Maximum Character Deletion level 80
+- CHR decreases buy prices
+- Armour upgrades increase DR and endurance
+- Killing a player over 20 levels lower than you doesn't grant you EK
+
+Ideas for new items; copied from HB Olympia Changelog:
+
+New Special Zems:
+Zemstone of Fire: Performs a fire spell upon death
+Zemstone of Ice: Performs an ice spell upon death
+Zemstone of Rebirth: Performs resurrection on you upon death. Converts into a normal 1/3 Zemstone when used
+Zemstone of Cancel: Performs Cancellation on your killer upon death
+Special Zems take precedence over normal zems (they will drop first)
+Special Zems will drop like normal zems, at a lower rate
+
+New item Sword of Heavens:
+Special Ability that restores all HP when used, provides AMP and immunity to Cancel and Freeze
+4d7+3 damage
+Monsters that drop: Abaddon, Centaurus, Fire Wyvern, Tigerworm, Unicorn, Wyvern
+
+New item Sword of Thirst:
+Heals you for 20% of damage dealt to your target when activated.
+2d14+3 damage
+Monsters that drop: Abaddon, Demon, Ettin, Fire Wyvern, Gargoyle, Minotaur
