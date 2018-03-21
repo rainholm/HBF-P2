@@ -47,9 +47,18 @@ The things that must be fixed and added regardless of the sources I start with:
       - New item: Dire Boar Hair    (REQ. new skin)
       - New item: Minotaur Hoof     (REQ. new skin)
       - New item: 
+ - You gain 15% more exp while in enemy town
       
 
 Make sure the following things work, and fix them if necessary
+- EXP during a Crusade is 33% of normal
+- The global chat is disabled during the Crusade ( if chat !, use ~)
+- No new monsters spawn in the Middlelands
+- Killing an enemy during the Crusade grants you 5-10% of the exp required to next level (based on level difference)
+- Killing an enemy grants you 1 contribution point
+      - Only the winner gets to keep the contribution point
+      - The loser loses everything
+- Crusade winners get the option to teleport to the enemy town straight from CityHall (Invasion)
 - MIM
 - Fire Bow effect (fire-spike)
 - Direction Bow (not necessary to fix even)
