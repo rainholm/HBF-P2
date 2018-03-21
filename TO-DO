@@ -48,7 +48,8 @@ The things that must be fixed and added regardless of the sources I start with:
       - New item: Minotaur Hoof     (REQ. new skin)
       - New item: 
  - You gain 15% more exp while in enemy town
-      
+ - Add new items gainable only by Farming
+      - Make farmable plants required for potion making
 
 Make sure the following things work, and fix them if necessary
 - EXP during a Crusade is 33% of normal
