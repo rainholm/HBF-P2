@@ -33,19 +33,19 @@ The things that must be fixed and added regardless of the sources I start with:
 - REP damage caps at 1000 rep (2d3+4 instead of flat +15 dmg), while rep drop-bonus caps at 800 rep (+3%) (increments of 200)
 - New item: Event Token, given as a reward for events
     - Should it be exchangeable to items or give a random item (lottery) upon use?
-- New item: Gargoyle Shield
+- New item: Gargoyle Shield         (REQ. new skin)
       - DR 30 (Same as Kite Shield)
       - MA 15%
       - PA 15%
 - Increase the amount of craftable potions
-      - New item: Beholder Eye
-      - New item: Bunny Ears
-      - New item: Zombie eat
-      - New item: Raindeer Antlers
-      - New item: Rudolph Nose
-      - New item: Frog Legs
-      - New item: Dire Boar Hair
-      - New item: Minotaur Hoof
+      - New item: Beholder Eye      (REQ. new skin)
+      - New item: Bunny Ears        (REQ. new skin)
+      - New item: Zombie eat        (REQ. new skin)
+      - New item: Raindeer Antlers  (REQ. new skin)
+      - New item: Rudolph Nose      (REQ. new skin)
+      - New item: Frog Legs         (REQ. new skin)
+      - New item: Dire Boar Hair    (REQ. new skin)
+      - New item: Minotaur Hoof     (REQ. new skin)
       - New item: 
       
 
