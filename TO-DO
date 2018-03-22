@@ -8,10 +8,11 @@ The things that must be fixed and added regardless of the sources I start with:
             - Black Shadow Sword, Wizard Magic Wand (MS.20) are craftable -only
                     - Make them unbuyable (in item.cfg) and check if you craft them
       
+            - Add Bows to the statted drop list (DEF_ITEMEFFECTTYPE_ATTACK_ARROW)
       DONE! - LB and DE have damage bonuses (+6 dmg) during the day / night. Also less damage (-2 dmg) in the opposite time
             - Demon Slayer does +15% damage to demons
             - The Slime King (spawns once you have killed 1000 slimes in map X)
-     DONE! - The Lottery Ticket (all items are obtainable, N/A, price of a ticket 20k or 50k
+      DONE! - The Lottery Ticket (all items are obtainable, N/A, price of a ticket 20k or 50k
             - The exp and gold drop rates
             - Beholder Necklace (allows you to see invisible enemies, but cancels all PFM/AMP/PFA/GDS and invisibility effects)
             - New rings for each monster (adds dmg against the respective mob type; for example a Slime Ring adds +1 dmg against Slimes and only Slimes)
@@ -42,6 +43,13 @@ The things that must be fixed and added regardless of the sources I start with:
             - New item: 'X' helmet
                   - Uses the 'Helm' -sprite
                   - Has a special effect (of what, idk)
+            - Vampiric Sword (https://web.archive.org/web/20110707050414/http://www.helbreath.info/forum/viewtopic.php?f=64&t=6779&sid=2e7f49c4506a5047082f54bc88018ab8)
+                  - GiS sprite, siphons some of the damage back as hp
+            - Armour of Reflection
+                  - Sends 50% of the damage back to the attacker
+            - Apocalypse weapons
+                  - Zerk wand with +50% dmg to NPC's during the Apoc.
+                  - Dark Exc. with +50% dmg to NPC's during the Apoc.
             - Increase the amount of craftable potions
                   - New item: Beholder Eye      (REQ. new skin)
                   - New item: Bunny Ears        (REQ. new skin)
@@ -57,7 +65,8 @@ The things that must be fixed and added regardless of the sources I start with:
                   - Make farmable plants required for potion making
                   - Farming specific spell manuals
 
-            Make sure the following things work, and fix them if necessary
+Make sure the following things work, and fix them if necessary
+            - Gold drop rate is REAALLY low -> 3/5th of hbusa
             - EXP during a Crusade is 33% of normal
             - The global chat is disabled during the Crusade ( if chat !, use ~)
             - No new monsters spawn in the Middlelands
