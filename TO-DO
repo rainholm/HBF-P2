@@ -39,6 +39,9 @@ The things that must be fixed and added regardless of the sources I start with:
                   - DR 30 (Same as Kite Shield)
                   - MA 15%
                   - PA 15%
+            - New item: 'X' helmet
+                  - Uses the 'Helm' -sprite
+                  - Has a special effect (of what, idk)
             - Increase the amount of craftable potions
                   - New item: Beholder Eye      (REQ. new skin)
                   - New item: Bunny Ears        (REQ. new skin)
@@ -109,6 +112,8 @@ The things that must be fixed and added regardless of the sources I start with:
             - Maximum Character Deletion level 80
             - CHR decreases buy prices
             - Armour upgrades increase DR and endurance
+            - Lower boss monster MA%
+                  - Makes it possible for mages to raid them also
 
 Ideas for new items; copied from HB Olympia Changelog:
 
