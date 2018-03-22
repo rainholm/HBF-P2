@@ -1,0 +1,95 @@
+CLIENT
+  CommandProcessor
+    Search for:
+         if (m_sDamageMoveAmount > 0)
+          wsprintf(cTxt, "-%dPts", m_sDamageMoveAmount); //pts
+         else strcpy(cTxt, "Critical!");
+
+    replace with:
+        wsprintf(cTxt, "-%luPts", m_sDamageMoveAmount); //pts
+
+
+
+  MotionEventHandler
+  \/ has 2 instances. Replace both.
+        if (sV1 > 0)
+         wsprintf(cTxt, "-%luPts!", sV1); //pts
+        else strcpy(cTxt, "Critical!");
+
+    replace with:
+       wsprintf(cTxt, "-%luPts!", sV1); //pts
+
+
+       case DEF_OBJECTMAGIC:
+       case DEF_OBJECTDAMAGEMOVE:
+       case DEF_OBJECTDAMAGE:
+        cDir = *cp;
+        cp++;
+
+        lp = (unsigned long *)cp;
+        sV1 = *lp; // ¹ÞÀº DamageÀÇ Å©±â, È¤Àº ¸¶¹ý ¹øÈ£ 
+        cp += 8;
+
+        sV2 = (short)*cp; // °ø°Ý¹ÞÀº ¹«±â ÀÎµ¦½º, È¤Àº ¸¶¹ý ½ÃÀüÀÚ ¼öÁØ  
+        cp++;
+          break;
+
+       case DEF_OBJECTDYING:
+        cDir = *cp;
+        cp++;
+
+        lp = (unsigned long *)cp;
+        sV1 = *lp; // ¹ÞÀº DamageÀÇ Å©±â, È¤Àº ¸¶¹ý ¹øÈ£ 
+        cp += 8;
+
+        sV2 = (short)*cp; // °ø°Ý¹ÞÀº ¹«±â ÀÎµ¦½º 
+        cp++;
+
+        sp  = (short *)cp;	// Á×Àº ÁÂÇ¥ 
+        sX = *sp;
+        cp += 2;
+
+        sp  = (short *)cp;
+        sY = *sp;
+        cp += 2;
+        break;
+
+
+
+
+
+Server
+  SendEventToNearClient_TypeA
+  find cp_s and replace this section --Client Part--
+       wp  = (WORD *)cp_s;
+       *wp = sOwnerH + 30000;  	// ObjectID	(+30000)
+       cp_s += 2;
+
+       *cp_s = m_pClientList[sOwnerH]->m_cDir;
+       cp_s++;
+       // ¾Æ·¡ºÎºÐÀº OBJECTDAMAGEÀÏ °æ¿ì¿¡¸¸ Àü¼ÛµÈ´Ù. ¸ÔÀº DamegeÀÇ Å©±â¿Í °ø°Ý¹ÞÀº Á¾·ù  
+       lp = (long *)cp_s;
+       *lp = (unsigned long)sV1;
+       cp_s += 8;
+       *cp_s = (unsigned char)sV2;
+       cp_s++;
+
+
+  --NPC Part--
+       wp  = (WORD *)cp_s;
+       *wp = sOwnerH + 40000;  	// ObjectID	(+40000)
+       cp_s += 2;
+
+       *cp_s = m_pNpcList[sOwnerH]->m_cDir;
+       cp_s++;
+       // OBJECTDAMAGE
+       lp = (long *)cp_s;
+       *lp = (unsigned long)sV1;
+       cp_s += 8;
+       *cp_s = (unsigned char)sV2;
+       cp_s++;
+
+
+That's all. Will display up to around -4300000000 give or take a few 10mill.
+
+Don't forget to offset the packets by +4 in the server in that function or you'll have unexpected results of other things tongue.gif
