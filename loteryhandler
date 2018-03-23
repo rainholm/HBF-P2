@@ -54,7 +54,6 @@ void CGame::LoteryHandler(int iClientH)
 		case 8: iItemID = 9; break; // ShortSword+1
 		case 9: iItemID = 11; break; // ShortSword(S.C)
 		case 10: iItemID = 12; break; // MainGauche
-
 		case 11: iItemID = 13; break; // MainGauche+1
 		case 12: iItemID = 14; break; // MainGauche(S.C)
 		case 13: iItemID = 15; break; // Gradius
@@ -126,20 +125,101 @@ void CGame::LoteryHandler(int iClientH)
 		case 79: iItemID = 844; break; // BlackShadowSword
 		case 80: iItemID = 873; break; // Fire-Bow
 		case 81: iItemID = 874; break; // Direction-Bow
+		case 82: iItemID = 256; break; // MagicWand(MS.20)
+		case 83: iItemID = 257; break; // MagicWand(MS.10)
+		case 84: iItemID = 258; break; // MagicWand(MS.0)
+		case 85: iItemID = 683; break; // WizMagicWand(MS20)
+		case 86: iItemID = 684; break; // WizMagicWand(MS10)
 		} break;
 
 	case 3: // Armours
 		switch (iDice(1, 10)) {
-		case 1: iItemID = 1; break; // Dagger
-		case 2: iItemID = 2; break; // Dagger (S.C)
-		case 3: iItemID = 3; break; // Dagger (Swd. Breaker)
-		case 4: iItemID = 4; break; // Dagger+1
-		case 5: iItemID = 6; break; // Knight Dagger
-		case 6: iItemID = 7; break; // Dirk
-		case 7: iItemID = 8; break; // Short Sword
-		case 8: iItemID = 9; break; // ShortSword+1
-		case 9: iItemID = 11; break; // ShortSword(S.C)
-		case 10: iItemID = 12; break; // MainGauche
+		case 1: iItemID = 79; break; // WoodShield
+		case 2: iItemID = 80; break; // LeatherShield
+		case 3: iItemID = 81; break; // TargeShield
+		case 4: iItemID = 82; break; // ScootermShield
+		case 5: iItemID = 83; break; // BlondeShield
+		case 6: iItemID = 84; break; // IronShield
+		case 7: iItemID = 85; break; // LagiShield
+		case 8: iItemID = 86; break; // KnightShield
+		case 9: iItemID = 87; break; // TowerShield
+		case 10: iItemID = 402; break; // Cape
+		case 11: iItemID = 429; break; // Cape+1
+		
+		case 12: iItemID = 450; break; // MainGauche(S.C)
+		case 13: iItemID = 451; break; // Gradius
+		case 14: iItemID = 453; break; // Gradius+1
+		case 15: iItemID = 454; break; // LongSword
+		case 16: iItemID = 455; break; // LongSword+1
+		case 17: iItemID = 456; break; // LongSword+2
+		case 18: iItemID = 457; break; // LongSword(S.C)
+		case 19: iItemID = 458; break; // Sabre
+		case 20: iItemID = 459; break; // Sabre+1
+		case 21: iItemID = 460; break; // Scimitar
+		case 22: iItemID = 461; break; // Scimitar+1
+		case 23: iItemID = 462; break; // Scimitar+2
+		case 24: iItemID = 470; break; // Falchion
+		case 25: iItemID = 471; break; // Falchion+1
+		case 26: iItemID = 473; break; // Falchion+2
+		case 27: iItemID = 474; break; // Esterk
+		case 28: iItemID = 475; break; // Esterk+1
+		case 29: iItemID = 476; break; // Esterk+2
+		case 30: iItemID = 477; break; // Rapier
+		case 31: iItemID = 478; break; // Rapier+1
+		case 32: iItemID = 479;	break; // Rapier+2
+		case 33: iItemID = 480;	break; // BroadSword
+		case 34: iItemID = 481;	break; // BroadSword+1
+		case 35: iItemID = 482;	break; // BroadSword+2
+		case 36: iItemID = 483;	break; // BroadSword(S.C)
+		case 37: iItemID = 484;	break; // BastadSword
+		case 38: iItemID = 590;	break; // Robe(M)
+		case 39: iItemID = 591;	break; // Robe(W)
+		case 40: iItemID = 600;	break; // Helm(M)
+		case 41: iItemID = 601;	break; // FullHelm(M)
+		case 42: iItemID = 602;	break; // Helm(W)
+		case 43: iItemID = 603;	break; // FullHelm(W)
+		case 44: iItemID = 675; break; // KnightPlateMail(M)
+		case 45: iItemID = 676;	break; // KnightPlateMail(W)
+		case 46: iItemID = 677;	break; // KnightPlateLeg(M)
+		case 47: iItemID = 678;	break; // KnightPlateLeg(W)
+		case 48: iItemID = 679;	break; // KnightFullHelm(M)
+		case 49: iItemID = 680;	break; // KnightFullHelm(W)
+		case 50: iItemID = 681;	break; // WizardHauberk(M)
+		case 51: iItemID = 682;	break; // WizardHauberk(W)
+		case 52: iItemID = 685;	break; // WizardRobe(M)
+		case 53: iItemID = 686;	break; // WizardRobe(W)
+		case 54: iItemID = 687;	break; // KnightHauberk(M)
+		case 55: iItemID = 688;	break; // KnightHauberk(W)
+		
+		case 56: iItemID = 750;	break; // Horned-Helm(M)
+		case 57: iItemID = 751;	break; // Wings-Helm(M)
+		case 58: iItemID = 752;	break; // Wizard-Cap(M)
+		case 59: iItemID = 753;	break; // Wizard-Hat(M)
+		case 60: iItemID = 754;	break; // Horned-Helm(W)
+		case 61: iItemID = 755;	break; // Wings-Helm(W)
+		case 62: iItemID = 756;	break; // Wizard-Cap(W)
+		case 63: iItemID = 757;	break; // Wizard-Hat(W)
+		case 64: iItemID = 770;	break; // SantaCostume(M)
+		case 65: iItemID = 771;	break; // SantaCostume(W)
+		case 66: iItemID = 72;	break; // WarAxe+1
+		case 67: iItemID = 73;	break; // WarAxe+2
+		case 68: iItemID = 75;	break; // ShortBow
+		case 69: iItemID = 76;	break; // LongBow
+		case 70: iItemID = 76;	break; // WerewolfLeather
+		case 71: iItemID = 231;	break; // PickAxe
+		case 72: iItemID = 560; break; // BattleAxe
+		case 73: iItemID = 580; break; // BattleAxe+1
+		case 74: iItemID = 581; break; // BattleAxe+2
+		case 75: iItemID = 582; break; // Sabre+2
+		case 76: iItemID = 760; break; // Hammer
+		case 77: iItemID = 761; break; // BattleHammer
+		case 78: iItemID = 843; break; // BarbarianBattleHammer
+		case 79: iItemID = 844; break; // BlackShadowSword
+		case 80: iItemID = 873; break; // Fire-Bow
+		case 81: iItemID = 874; break; // Direction-Bow
+		case 82: iItemID = 256; break; // MagicWand(MS.20)
+		case 83: iItemID = 257; break; // MagicWand(MS.10)
+		case 84: iItemID = 258; break; // MagicWand(MS.0)
 
 		} break;
 
