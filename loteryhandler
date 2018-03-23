@@ -1,0 +1,197 @@
+void CGame::LoteryHandler(int iClientH)
+{
+	class  CItem * pItem;
+	int     iItemID;
+
+	if (m_pClientList[iClientH] == NULL) return;
+	if ((m_pClientList[iClientH]->m_iAdminUserLevel > 0) && (m_pClientList[iClientH]->m_iAdminUserLevel < 3)) return;
+	
+	switch (iDice(1,8)) { // Main switch
+	case 1: // Potions & Consummables
+		switch (iDice(1, 31)) {
+		case 1: iItemID = 91; break; // RedPotion
+		case 2: iItemID = 92; break; // BigRedPotion
+		case 3: iItemID = 93; break; // BluePotion
+		case 4: iItemID = 94; break; // BigBluePotion
+		case 5: iItemID = 95; break; // GreenPotion
+		case 6: iItemID = 96; break; // BigGreenPotion
+		case 7: iItemID = 98; break; // Baguette
+		case 8: iItemID = 99; break; // Meat
+		case 9: iItemID = 100; break; // Fish
+		case 10: iItemID = 780; break; // RedCandy
+		case 11: iItemID = 781; break; // BlueCandy
+		case 12: iItemID = 782; break; // GreenCandy
+		case 13: iItemID = 104; break; // Map
+		case 14: iItemID = 114; break; // RecallScroll
+		case 15: iItemID = 115; break; // InvisibilityScroll
+		case 16: iItemID = 116; break; // DetectInviScroll
+		case 17: iItemID = 117; break; // BleedingIslandTicket
+		case 18: iItemID = 118; break; // Berserk Scroll (TOBE ADDED)
+		case 19: iItemID = 270; break; // HairColorPotion
+		case 20: iItemID = 271; break; // HairStylePotion
+		case 21: iItemID = 272; break; // SkinColorPotion
+		case 22: iItemID = 273; break; // InvisibilityPotion
+		case 23: iItemID = 274; break; // SexChangePotion
+		case 24: iItemID = 275; break; // OgrePotion
+		case 25: iItemID = 276; break; // UnderWearPotion
+		case 26: iItemID = 390; break; // PowerGreenPotion
+		case 27: iItemID = 391; break; // SuperGreenPotion
+		case 28: iItemID = 660; break; // UnfreezePotion
+		case 29: iItemID = 840; break; // SuperRedPotion
+		case 30: iItemID = 841; break; // SuperBluePotion
+		case 31: iItemID = 842; break; // SuperGreenPotion
+		} break;
+
+	case 2: // Weapons
+		switch (iDice(1, 10)) {
+		case 1: iItemID = 1; break; // Dagger
+		case 2: iItemID = 2; break; // Dagger (S.C)
+		case 3: iItemID = 3; break; // Dagger (Swd. Breaker)
+		case 4: iItemID = 4; break; // Dagger+1
+		case 5: iItemID = 6; break; // Knight Dagger
+		case 6: iItemID = 7; break; // Dirk
+		case 7: iItemID = 8; break; // Short Sword
+		case 8: iItemID = 9; break; // ShortSword+1
+		case 9: iItemID = 11; break; // ShortSword(S.C)
+		case 10: iItemID = 12; break; // MainGauche
+
+		} break;
+
+	case 3: // Armours
+		switch (iDice(1, 10)) {
+		case 1: iItemID = 1; break; // Dagger
+		case 2: iItemID = 2; break; // Dagger (S.C)
+		case 3: iItemID = 3; break; // Dagger (Swd. Breaker)
+		case 4: iItemID = 4; break; // Dagger+1
+		case 5: iItemID = 6; break; // Knight Dagger
+		case 6: iItemID = 7; break; // Dirk
+		case 7: iItemID = 8; break; // Short Sword
+		case 8: iItemID = 9; break; // ShortSword+1
+		case 9: iItemID = 11; break; // ShortSword(S.C)
+		case 10: iItemID = 12; break; // MainGauche
+
+		} break;
+
+	case 4: // Body Parts
+		switch (iDice(1, 53)) {
+		case 1: iItemID = 188;	break; // SnakeMeat
+		case 2: iItemID = 189;	break; // SnakeSkin
+		case 3: iItemID = 190;	break; // SnakeTeeth
+		case 4: iItemID = 191;	break; // SnakeTongue
+		case 5: iItemID = 192;	break; // AntLeg
+		case 6: iItemID = 193;	break; // AntFeeler
+		case 7: iItemID = 194;	break; // CyclopsEye
+		case 8: iItemID = 195;	break; // CyclopsHandEdge
+		case 9: iItemID = 196;	break; // CyclopsHeart
+		case 10: iItemID = 197;	break; // CyclopsMeat
+		case 11: iItemID = 198;	break; // CyclopsLeather
+		case 12: iItemID = 199;	break; // HelboundHeart
+		case 13: iItemID = 200;	break; // HelboundLeather
+		case 14: iItemID = 201;	break; // HelboundTail
+		case 15: iItemID = 202;	break; // HelboundTeeth
+		case 16: iItemID = 203;	break; // HelboundClaw
+		case 17: iItemID = 204;	break; // HelboundTongue
+		case 18: iItemID = 205;	break; // LumpofClay
+		case 19: iItemID = 206;	break; // OrcMeat
+		case 20: iItemID = 207;	break; // OrcLeather
+		case 21: iItemID = 208;	break; // OrcTeeth
+		case 22: iItemID = 209;	break; // OgreHair
+		case 23: iItemID = 210;	break; // OgreHeart
+		case 24: iItemID = 211;	break; // OgreMeat
+		case 25: iItemID = 212;	break; // OgreLeather
+		case 26: iItemID = 213;	break; // OgreTeeth
+		case 27: iItemID = 214;	break; // OgreClaw
+		case 28: iItemID = 215;	break; // ScorpionPincers
+		case 29: iItemID = 216;	break; // ScorpionMeat
+		case 30: iItemID = 217;	break; // ScorpionSting
+		case 31: iItemID = 218;	break; // ScorpionSkin
+		case 32: iItemID = 219;	break; // SkeletonBones
+		case 33: iItemID = 220;	break; // SlimeJelly
+		case 34: iItemID = 221;	break; // StoneGolemPiece
+		case 35: iItemID = 222;	break; // TrollHeart
+		case 36: iItemID = 223;	break; // TrollMeat
+		case 37: iItemID = 224;	break; // TrollLeather
+		case 38: iItemID = 225;	break; // TrollClaw
+		case 39: iItemID = 540;	break; // DemonEye
+		case 40: iItemID = 541;	break; // DemonHeart
+		case 41: iItemID = 542;	break; // DemonMeat
+		case 42: iItemID = 543;	break; // DemonLeather
+		case 43: iItemID = 544;	break; // UnicornHeart
+		case 44: iItemID = 545;	break; // UnicornHorn
+		case 45: iItemID = 546;	break; // UnicornMeat
+		case 46: iItemID = 547;	break; // UnicornLeather
+		case 47: iItemID = 548;	break; // WerewolfHeart
+		case 48: iItemID = 549;	break; // WerewolfNail
+		case 49: iItemID = 550;	break; // WerewolfMeat
+		case 50: iItemID = 551;	break; // WerewolfTail
+		case 51: iItemID = 552;	break; // WerewolfTeeth
+		case 52: iItemID = 553;	break; // WerewolfLeather
+		case 53: iItemID = 554;	break; // WerewolfClaw
+
+		} break;
+
+	case 5: // Misc. Junk
+		switch (iDice(1, 9)) { // Always drops a 5k Gold Pocket if nothing else drops
+		case 1: iItemID = 740; break; // 5000GoldPocket
+		case 2: if (iDice(1, 15) == 7) iItemID = 741; // 10000GoldPocket
+				else iItemID = 740; break; // 5000GoldPocket
+		case 3: if (iDice(1, 30) == 7) iItemID = 742; // 50000GoldPocket
+				else iItemID = 740; break; // 5000GoldPocket
+		case 4: if (iDice(1, 60) == 30) iItemID = 743; // 100000GoldPocket
+				else iItemID = 740; break; // 5000GoldPocket
+		case 5: if (iDice(1, 120) == 60) iItemID = 744; // 1000000GoldPocket
+				else iItemID = 740; break; // 5000GoldPocket
+		case 6: if (iDice(1, 50) == 25) iItemID = 868; // AcientTablet(LU)
+				else iItemID = 740; break; // 5000GoldPocket
+		case 7: if (iDice(1, 50) == 25) iItemID = 869; // AcientTablet(LD)
+				else iItemID = 740; break; // 5000GoldPocket
+		case 8: if (iDice(1, 50) == 25) iItemID = 870; // AcientTablet(RU)
+				else iItemID = 740; break; // 5000GoldPocket
+		case 9: if (iDice(1, 50) == 25) iItemID = 871; // AcientTablet(RD)
+				else iItemID = 740; break; // 5000GoldPocket
+		}
+		break;
+
+			/* NOTE ON RARE SWITCHES:
+			The chance of getting to the rare switch is 1/40 (main switch iDice(1,40))
+			The rare switch iDice should be iDice(1,x) when X = (24 + the amount of cases under the switch)
+			The iDice under each CASE: should be iDice(1,y) when Y = The total amount of CASES under the switch
+			This makes the total chance of getting a rare item 1/1000.
+			*/
+
+		case 6: // Semi-rare item switch (1/40 chance of getting this far)
+			switch (iDice(1, 26)) {
+			case 1: if (iDice(1, 2) == 1) iItemID = 650; break; // ZemstoneOfSacrifice
+			case 2: if (iDice(1, 2) == 2) iItemID = 429; break; // Cape+1
+			}
+				break;
+
+		case 7: // Rare item switch
+			switch (iDice(1, 260)) {
+			case 1: if (iDice(1, 2) == 1) iItemID = 20; break; // Excaliber
+			case 2: if (iDice(1, 2) == 2) iItemID = 74; break; // 4BladeGoldenAxe
+			}
+			break;
+			
+	}
+
+	//chance
+	if (iDice(1,1000) == 3) iItemID=650; //ZemstoneOfSacrifice
+	//chance
+	
+
+	pItem = new class CItem;
+	if (_bInitItemAttr(pItem, iItemID) == FALSE) {
+	delete pItem;
+	}
+
+	else {
+		m_pMapList[ m_pClientList[iClientH]->m_cMapIndex ]->bSetItem(m_pClientList[iClientH]->m_sX,
+		m_pClientList[iClientH]->m_sY, pItem);
+		SendEventToNearClient_TypeB(MSGID_EVENT_COMMON, DEF_COMMONTYPE_ITEMDROP, m_pClientList[iClientH]->m_cMapIndex,
+		m_pClientList[iClientH]->m_sX, m_pClientList[iClientH]->m_sY,  
+		pItem->m_sSprite, pItem->m_sSpriteFrame, pItem->m_cItemColor);
+	}
+
+
+}
