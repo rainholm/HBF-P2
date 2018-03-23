@@ -43,7 +43,7 @@ void CGame::LoteryHandler(int iClientH)
 		} break;
 
 	case 2: // Weapons
-		switch (iDice(1, 10)) {
+		switch (iDice(1, 86)) {
 		case 1: iItemID = 1; break; // Dagger
 		case 2: iItemID = 2; break; // Dagger (S.C)
 		case 3: iItemID = 3; break; // Dagger (Swd. Breaker)
@@ -130,10 +130,12 @@ void CGame::LoteryHandler(int iClientH)
 		case 84: iItemID = 258; break; // MagicWand(MS.0)
 		case 85: iItemID = 683; break; // WizMagicWand(MS20)
 		case 86: iItemID = 684; break; // WizMagicWand(MS10)
+		case 87: iItemID = 615; break; // GiantSword
+		case 88: iItemID = 617; break; // CompositeBow
 		} break;
 
 	case 3: // Armours
-		switch (iDice(1, 10)) {
+		switch (iDice(1, 84)) {
 		case 1: iItemID = 79; break; // WoodShield
 		case 2: iItemID = 80; break; // LeatherShield
 		case 3: iItemID = 81; break; // TargeShield
@@ -145,7 +147,6 @@ void CGame::LoteryHandler(int iClientH)
 		case 9: iItemID = 87; break; // TowerShield
 		case 10: iItemID = 402; break; // Cape
 		case 11: iItemID = 429; break; // Cape+1
-		
 		case 12: iItemID = 450; break; // MainGauche(S.C)
 		case 13: iItemID = 451; break; // Gradius
 		case 14: iItemID = 453; break; // Gradius+1
@@ -190,7 +191,6 @@ void CGame::LoteryHandler(int iClientH)
 		case 53: iItemID = 686;	break; // WizardRobe(W)
 		case 54: iItemID = 687;	break; // KnightHauberk(M)
 		case 55: iItemID = 688;	break; // KnightHauberk(W)
-		
 		case 56: iItemID = 750;	break; // Horned-Helm(M)
 		case 57: iItemID = 751;	break; // Wings-Helm(M)
 		case 58: iItemID = 752;	break; // Wizard-Cap(M)
@@ -312,8 +312,32 @@ void CGame::LoteryHandler(int iClientH)
 
 		case 6: // Semi-rare item switch (1/40 chance of getting this far)
 			switch (iDice(1, 26)) {
-			case 1: if (iDice(1, 2) == 1) iItemID = 650; break; // ZemstoneOfSacrifice
-			case 2: if (iDice(1, 2) == 2) iItemID = 429; break; // Cape+1
+			case 1: if (iDice(1, 2) == 1) iItemID = 20; break; // Excaliber
+			case 2: if (iDice(1, 2) == 2) iItemID = 74; break; // 4BladeGoldenAxe
+			case 3: if (iDice(1, 2) == 1) iItemID = 259; break; // MagicWand(M.Shield)
+			case 4: if (iDice(1, 2) == 2) iItemID = 290; break; // Flameberge+3(LLF)
+			case 5: if (iDice(1, 2) == 1) iItemID = 291; break; // MagicWand(MS30-LLF)
+			case 6: if (iDice(1, 2) == 2) iItemID = 292; break; // GoldenAxe(LLF)
+			case 7: if (iDice(1, 2) == 1) iItemID = 300; break; // MagicNecklace(RM10)
+			case 8: if (iDice(1, 2) == 2) iItemID = 305; break; // MagicNecklace(DM+1)
+			case 9: if (iDice(1, 2) == 1) iItemID = 308; break; // MagicNecklace(MS10)
+			case 10: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 11: if (iDice(1, 2) == 2) iItemID = 334; break; // LuckyGoldRing
+			case 12: if (iDice(1, 2) == 2) iItemID = 335; break; // EmeraldRing
+			case 13: if (iDice(1, 2) == 2) iItemID = 336; break; // SapphireRing
+			case 14: if (iDice(1, 2) == 2) iItemID = 337; break; // RubyRing
+			case 15: if (iDice(1, 2) == 2) iItemID = 338; break; // MemorialRing
+			case 16: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 17: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 18: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 19: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 20: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 21: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 22: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 23: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 24: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 25: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			
 			}
 				break;
 
@@ -321,6 +345,84 @@ void CGame::LoteryHandler(int iClientH)
 			switch (iDice(1, 260)) {
 			case 1: if (iDice(1, 2) == 1) iItemID = 20; break; // Excaliber
 			case 2: if (iDice(1, 2) == 2) iItemID = 74; break; // 4BladeGoldenAxe
+			case 3: if (iDice(1, 2) == 1) iItemID = 259; break; // MagicWand(M.Shield)
+			case 4: if (iDice(1, 2) == 2) iItemID = 290; break; // Flameberge+3(LLF)
+			case 5: if (iDice(1, 2) == 1) iItemID = 291; break; // MagicWand(MS30-LLF)
+			case 6: if (iDice(1, 2) == 2) iItemID = 292; break; // GoldenAxe(LLF)
+			case 7: if (iDice(1, 2) == 1) iItemID = 300; break; // MagicNecklace(RM10)
+			case 8: if (iDice(1, 2) == 2) iItemID = 305; break; // MagicNecklace(DM+1)
+			case 9: if (iDice(1, 2) == 1) iItemID = 308; break; // MagicNecklace(MS10)
+			case 10: if (iDice(1, 2) == 2) iItemID = 311; break; // MagicNecklace(DF+10)
+			case 11: if (iDice(1, 2) == 2) iItemID = 334; break; // LuckyGoldRing
+			case 12: if (iDice(1, 2) == 2) iItemID = 335; break; // EmeraldRing
+			case 13: if (iDice(1, 2) == 2) iItemID = 336; break; // SapphireRing
+			case 14: if (iDice(1, 2) == 2) iItemID = 337; break; // RubyRing
+			case 15: if (iDice(1, 2) == 2) iItemID = 338; break; // MemorialRing
+			case 16: if (iDice(1, 2) == 2) iItemID = 490; break; // BloodSword
+			case 17: if (iDice(1, 2) == 2) iItemID = 491; break; // BloodAxe
+			case 18: if (iDice(1, 2) == 2) iItemID = 492; break; // BloodRapier
+			case 19: if (iDice(1, 2) == 2) iItemID = 610; break; // XelimaBlade
+			case 20: if (iDice(1, 2) == 2) iItemID = 611; break; // XelimaAxe
+			case 21: if (iDice(1, 2) == 2) iItemID = 612; break; // XelimaRapier
+			case 22: if (iDice(1, 2) == 2) iItemID = 613; break; // SwordofMedusa
+			case 23: if (iDice(1, 2) == 2) iItemID = 614; break; // SwordofIceElemental
+			case 24: if (iDice(1, 2) == 2) iItemID = 616; break; // DemonSlayer
+			case 25: if (iDice(1, 2) == 2) iItemID = 618; break; // DarkElfBow
+			case 26: if (iDice(1, 2) == 2) iItemID = 620; break; // MerienShield
+			case 27: if (iDice(1, 2) == 2) iItemID = 621; break; // MerienPlateMailM
+			case 28: if (iDice(1, 2) == 2) iItemID = 622; break; // MerienPlateMailW
+			case 29: if (iDice(1, 2) == 2) iItemID = 630; break; // RingOfXelima
+			case 30: if (iDice(1, 2) == 2) iItemID = 631; break; // RingOfAbaddon
+			case 31: if (iDice(1, 2) == 2) iItemID = 632; break; // RingOfOgrepower
+			case 32: if (iDice(1, 2) == 2) iItemID = 633; break; // RingOfDemonpower
+			case 33: if (iDice(1, 2) == 2) iItemID = 634; break; // RingOfWizard
+			case 34: if (iDice(1, 2) == 2) iItemID = 635; break; // RingOfMage
+			case 35: if (iDice(1, 2) == 2) iItemID = 636; break; // RingOfGrandMage
+			case 36: if (iDice(1, 2) == 2) iItemID = 637; break; // KnecklaceOfLightPro
+			case 37: if (iDice(1, 2) == 2) iItemID = 638; break; // KnecklaceOfFirePro
+			case 38: if (iDice(1, 2) == 2) iItemID = 639; break; // KnecklaceOfPoisonPro
+			case 39: if (iDice(1, 2) == 2) iItemID = 640; break; // KnecklaceOfSufferent
+			case 40: if (iDice(1, 2) == 2) iItemID = 641; break; // KnecklaceOfMedusa
+			case 41: if (iDice(1, 2) == 2) iItemID = 642; break; // KnecklaceOfIcePro
+			case 42: if (iDice(1, 2) == 2) iItemID = 643; break; // KnecklaceOfIceEle
+			case 43: if (iDice(1, 2) == 2) iItemID = 644; break; // KnecklaceOfAirEle
+			case 44: if (iDice(1, 2) == 2) iItemID = 645; break; // KnecklaceOfEfreet
+			case 45: if (iDice(1, 2) == 2) iItemID = 646; break; // NecklaceOfBeholder
+			case 46: if (iDice(1, 2) == 2) iItemID = 647; break; // NecklaceOfStoneGol
+			case 47: if (iDice(1, 2) == 2) iItemID = 648; break; // NecklaceOfLiche
+			case 48: if (iDice(1, 2) == 2) iItemID = 734; break; // RingofArcmage
+			case 49: if (iDice(1, 2) == 2) iItemID = 735; break; // RingofDragonpower
+			case 50: if (iDice(1, 2) == 2) iItemID = 762; break; // GiantBattleHammer
+			case 51: if (iDice(1, 2) == 2) iItemID = 765; break; // ThirdMemorialRing
+			case 52: if (iDice(1, 2) == 2) iItemID = 845; break; // StormBringer
+			case 53: if (iDice(1, 2) == 2) iItemID = 846; break; // The_Devastator
+			case 54: if (iDice(1, 2) == 2) iItemID = 847; break; // DarkExecutor
+			case 55: if (iDice(1, 2) == 2) iItemID = 848; break; // LightingBlade
+			case 56: if (iDice(1, 2) == 2) iItemID = 849; break; // KlonessBlade
+			case 57: if (iDice(1, 2) == 2) iItemID = 850; break; // KlonessAxe
+			case 58: if (iDice(1, 2) == 2) iItemID = 851; break; // KlonessEsterk
+			case 59: if (iDice(1, 2) == 2) iItemID = 852; break; // CancelManual
+			case 60: if (iDice(1, 2) == 2) iItemID = 853; break; // E.S.W.Manual
+			case 61: if (iDice(1, 2) == 2) iItemID = 857; break; // I.M.CManual
+			case 62: if (iDice(1, 2) == 2) iItemID = 858; break; // NecklaceOfMerien
+			case 63: if (iDice(1, 2) == 2) iItemID = 859; break; // NecklaceOfKloness
+			case 64: if (iDice(1, 2) == 2) iItemID = 860; break; // NecklaceOfXelima
+			case 65: if (iDice(1, 2) == 2) iItemID = 861; break; // BerserkWand(MS.20)
+			case 66: if (iDice(1, 2) == 2) iItemID = 862; break; // BerserkWand(MS.10)
+			case 67: if (iDice(1, 2) == 2) iItemID = 863; break; // KlonessWand(MS.20)
+			case 68: if (iDice(1, 2) == 2) iItemID = 864; break; // KlonessWand(MS.10)
+			case 69: if (iDice(1, 2) == 2) iItemID = 865; break; // ResurWand(MS.20)
+			
+			case 61: if (iDice(1, 2) == 2) iItemID = 866; break; // ResurWand(MS.10)
+			case 62: if (iDice(1, 2) == 2) iItemID = 857; break; // I.M.CManual
+			case 63: if (iDice(1, 2) == 2) iItemID = 858; break; // NecklaceOfMerien
+			case 64: if (iDice(1, 2) == 2) iItemID = 859; break; // NecklaceOfKloness
+			case 65: if (iDice(1, 2) == 2) iItemID = 860; break; // NecklaceOfXelima
+			case 66: if (iDice(1, 2) == 2) iItemID = 861; break; // BerserkWand(MS.20)
+			case 67: if (iDice(1, 2) == 2) iItemID = 862; break; // BerserkWand(MS.10)
+			case 68: if (iDice(1, 2) == 2) iItemID = 863; break; // KlonessWand(MS.20)
+			case 69: if (iDice(1, 2) == 2) iItemID = 864; break; // KlonessWand(MS.10)
+			case 70: if (iDice(1, 2) == 2) iItemID = 865; break; // ResurWand(MS.20)
 			}
 			break;
 			
